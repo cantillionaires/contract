@@ -1,5 +1,7 @@
-# Cantillionaries
+# Cantillionaires
 
-The contract and the test suite.
+The contract and the test suite!
 
-`npx hardhat test` will run the tests. See the `scripts/` for deployment and snapshot examples.
+`npx hardhat test` will run the tests.
+
+See the `scripts/` for deployment and snapshot examples.
