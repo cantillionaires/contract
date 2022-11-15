@@ -43,7 +43,7 @@ contract Cantillionaires is ERC721AQueryable, ERC2981, Ownable {
   error BuddiesOnly();
   error TooMany();
   error ZeroMintError();
-  error BadEth(uint256 expected);
+  error BadCanto(uint256 expected);
 
   constructor(
     uint256 cbdMintLimit,
@@ -130,10 +130,10 @@ contract Cantillionaires is ERC721AQueryable, ERC2981, Ownable {
       cbdClaimedCount = cbdClaimedCount + 1;
     }
 
-    uint256 requiredEth = numToCharge * price;
+    uint256 requiredCanto = numToCharge * price;
 
-    if(msg.value != requiredEth){
-      revert BadEth(requiredEth);
+    if(msg.value != requiredCanto){
+      revert BadCanto(requiredCanto);
     }
 
     _mint(msg.sender, numToMint);    
