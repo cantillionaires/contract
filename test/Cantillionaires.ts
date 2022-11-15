@@ -254,7 +254,7 @@ describe("Cantillionaires", function () {
       await cantillionaires.toggleIsSaleActive()
       await cantillionaires.setPrice(ethers.utils.parseEther('1'))
       await expect(cantillionaires.connect(otherUser3).mint(1, proofs[1], ogProofs[1]))
-      .to.be.revertedWithCustomError(cantillionaires, "BadEth")
+      .to.be.revertedWithCustomError(cantillionaires, "BadCanto")
         .withArgs(ethers.utils.parseEther('1'));
     })
     it("should allow rando to mint when it's not Buddies only", async() => {
